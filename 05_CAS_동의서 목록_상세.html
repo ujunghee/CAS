@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <script defer src="./js/main.js"></script>
+  <title>CAS-접수목록</title>
+</head>
+
+<body>
+  <!-- 헤더 시작 -->
+  <header>
+    <div class="header-bg">
+      <div class="header">
+        <img src="./img/logo.png" alt="질병관리처-로고">
+        <p>동의서 기록관리 시스템</p>
+      </div>
+    </div>
+    <div class="nav-header">
+      <ul>
+        <li><a href="./01_CAS_접수목록_메인.html"><img src="./img/cas-home.png" alt=""></a></li>
+        <li><a href="./02_CAS_이관반영_대기목록.html">
+            <p>이관반영</p><strong>12</strong>
+          </a></li>
+        <li><a href="./03_CAS_이관신청 목록.html">
+            <p>이관신청</p><strong>12</strong>
+          </a></li>
+        <li class="active"><a href="#">
+            <p>동의서목록</p><strong>12</strong>
+          </a></li>
+        <li><a href="./06_CAS_변경반영 대기목록.html">
+            <p>변견반영</p>
+          </a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- 해더 끝 -->
+
+  <!-- 왼쪽 메뉴 시작 -->
+  <section>
+    <form>
+      <div class="left-menu">
+        <div class="menu-search">
+          <input type="search" placeholder="검색어를 입력해주세요.">
+          <button type="button">검색</button>
+        </div>
+        <div id="lnb">
+          <div class="title-menu">
+            <a href="#">
+              <img src="./img/server-storage.png" alt="동의서 보관소">
+              <p>동의서 보관소</p>
+            </a>
+          </div>
+          <ul>
+            <li>
+              <a href="#"><img src="./img/project.png" alt="1차아이콘">국건영 검체자원화 사업(2021년도)</a>
+              <ul>
+                <li>
+                  <a href="#"><img src="./img/hospital.png" alt="2차아이콘">서울아산병원</a>
+                  <ul>
+                    <li>
+                      <div class="input-button">
+                        <button type="button" class="btnlist btn-apply">반영</button>
+                        <button type="button" class="btnlist btn-retract">취소</button>
+                      </div>
+                      <a href="#"><img src="./img/files-and-folders.png" alt="3차아이콘">01-11-3201-00001
+                      </a>
+                      <ul>
+                        <li>
+                          <a href="#"><img src="./img/PDF_02.png" alt="4차아이콘">25003-0458.pdf</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="disabled">
+                      <a href="#"><img src="./img/files-and-folders.png" alt="3차아이콘">01-11-3201-00002</a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./img/files-and-folders.png" alt="3차아이콘">01-11-3201-00003</a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./img/files-and-folders.png" alt="03차아이콘">01-11-3201-00004</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"><img src="./img/hospital.png" alt="2차아이콘">서울대학병원</a>
+                </li>
+                <li>
+                  <a href="#"><img src="./img/hospital.png" alt="2차아이콘">충북대병원</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/project.png" alt="코로나19 확진자 멀티오믹스 데이터 생">1Depth
+              </a>
+              <ul>
+                <li>
+                  <a href="#"><img src="./img/hospital.png" alt="1차아이콘">2Depth</a>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i></i>
+                        <p>반영중</p>
+                        <img src="./img/files-and-folders.png" alt="3차아이콘">25001-11-3201-00001
+                      </a>
+                      <ul>
+                        <li>
+                          <a href="#"><img src="./img/PDF_02.png" alt="4차아이콘">25025003-0458.pdf</a>
+                        </li>
+                        <li>
+                          <a href="#"><img src="./img/PDF_02.png" alt="4차아이콘">25025003-0458.pdf</a>
+                        </li>
+                        <!-- 반영중 -->
+                        <li class="pdf-all">
+                          <i></i>
+                          <a class="pdf-layered line" href="#"><img src="./img/PDF_02.png"
+                              alt="4차아이콘">25025003-0458.pdf</a>
+                          <a class="pdf-layered" href="#"><img src="./img/PDF_02.png" alt="4차아이콘">25025003-0458.pdf</a>
+                        </li>
+                        <!-- 대기중 -->
+                        <li class="pdf-wait">
+                          <a class="pdf-layered line" href="#"><img src="./img/PDF_02.png"
+                              alt="4차아이콘">22505003-0458.pdf</a>
+                          <a class="pdf-layered" href="#"><img src="./img/PDF_02.png" alt="4차아이콘">25025003-0458.pdf</a>
+                        </li>
+                        <!-- 반영완료 -->
+                        <li class="pdf-finish">
+                          <a class="pdf-layered line" href="#"><img src="./img/PDF_02.png"
+                              alt="4차아이콘">25250003-0458.pdf</a>
+                          <a class="pdf-layered" href="#"><img src="./img/PDF_02.png" alt="4차아이콘">25002503-0458.pdf</a>
+                        </li>
+                        <li>
+                          <a href="#"><img src="./img/PDF_02.png" alt="4차아이콘">25002503-0458.pdf</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="#"><img src="./img/files-and-folders.png" alt="3차아이콘">01-11-3201-00002</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><img src="./img/hospital.png" alt="2차아이콘">2Depth</a>
+                  <ul>
+                    <li><a href="#"><img src="./img/files-and-folders.png" alt="3차아이콘">01-11-3201-00001</a></li>
+                    <li><a href="#"><img src="./img/files-and-folders.png" alt="3차아이콘">01-11-3201-00002</a></li>
+                    <li><a href="#"><img src="./img/files-and-folders.png" alt="3차아이콘">01-11-3201-00003</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><img src="./img/project.png" alt="1차아이콘">1Depth</a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/project.png" alt="1차아이콘">1Depth</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </form>
+  </section>
+  <!-- 왼쪽 메뉴 끝 -->
+
+  <!-- 콘텐츠 시작 -->
+  <section class="container">
+    <div class="content inner">
+      <!-- 접수 목록 -->
+      <h1>4 - 동의서 목록</h1>
+      <div class="category">
+        <ul>
+          <li><a href="#">이관신청</a></li>
+          <li><a href="#">동의서보관소<img class="next-img" src="./img/next-icon.png" alt="아이콘"></a></li>
+          <li><a href="#">국건영검체자원화사업(2021년도)<img class="next-img" src="./img/next-icon.png" alt="아이콘"></a></li>
+          <li><a href="#">서울아산병원<img class="next-img" src="./img/next-icon.png" alt="아이콘"></a></li>
+          <li><a href="#">01-11-3201-00001<img class="next-img" src="./img/next-icon.png" alt="아이콘"></a></li>
+          <li><a href="#">25003-0450.pdf</a></li>
+        </ul>
+      </div>
+      <!-- 접수 목록 끝 -->
+
+      <!-- Table 변경 승인 목록 시작 -->
+      <div class="information-table">
+        <div class="list-tb-item display">
+          <p class="black-text">동의서 메타 정보</p>
+          <div class="btn-list">
+            <button class="btn-60" type="button">증명서 발급</button>
+            <button class="btn-60" type="button">PDF 다운로드</button>
+          </div>
+        </div>
+        <table>
+          <tbody>
+            <tr>
+              <td class="in">동의서 관리번호</td>
+              <td class="user">25003-0450</td>
+              <td class="in">동의서명</td>
+              <td class="user">인체유래물등의 기증동의서</td>
+              <td class="in">동의서명</td>
+              <td class="user">인체유래물등의 기증동의서</td>
+            </tr>
+            <tr>
+              <td class="in">접수번호</td>
+              <td class="user">01-11-3201-00005</td>
+              <td class="in">접수유형</td>
+              <td class="user">온라인 이관신청</td>
+              <td class="in">동의서명</td>
+              <td class="user">인체유래물등의 기증동의서</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card online-list">
+        <div class="online-table align-center">
+          <div class="list-tb-item">
+            <p class="black-text">동의서 이력 정보</p>
+          </div>
+          <table>
+            <colgroup>
+              <col width="5%">
+              <col width="8%">
+              <col width="14%">
+              <col width="10%">
+              <col width="14%">
+              <col width="14%">
+              <col width="15%">
+              <col width="15%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>NO</th>
+                <th>이력 분류</th>
+                <th>접수 번호</th>
+                <th>동의서 관리번호</th>
+                <th>신청 정보</th>
+                <th>승인 정보</th>
+                <th>반영 정보</th>
+                <th>상세 보기</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>이관반영</td>
+                <td>01-11-3201-00001</td>
+                <td>25003-0403</td>
+                <td>김신청<br>
+                  (2022-07-21 17:31:33)</td>
+                <td>김바뱅<br>
+                  (2022-07-21 17:31:33)</td>
+                <td>김과장<br>
+                  (2022-07-21 17:31:33)</td>
+                <td>
+                  <p class="name light-blue"><img class="flie-icon" src="./img/flie.png" alt="아이콘">25003-0403.PDF</p>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>이관반영</td>
+                <td>01-11-3201-00001</td>
+                <td>25003-0403</td>
+                <td>김신청<br>
+                  (2022-07-21 17:31:33)</td>
+                <td>김바뱅<br>
+                  (2022-07-21 17:31:33)</td>
+                <td>김과장<br>
+                  (2022-07-21 17:31:33)</td>
+                <td>
+                  <p class="name light-blue"><img class="flie-icon" src="./img/flie.png" alt="아이콘">25003-0403.PDF</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Table 변경 승인 목록 끝 -->
+      </div>
+      <div class="preview">
+        <div class="list-tb-item">
+          <p class="black-text">동의서 이력 정보</p>
+        </div>
+        <div class="pre-content">
+          <img src="./img/img-2.png" alt="">
+        </div>
+      </div>
+  </section>
+</body>
+
+</html>
